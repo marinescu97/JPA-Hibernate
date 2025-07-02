@@ -3,13 +3,17 @@ package com.spring.JPAHibernate.dto;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
 @EqualsAndHashCode(of = "name")
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProductDto implements Serializable {
     @NotBlank(message = "Name is required")
     private String name;
